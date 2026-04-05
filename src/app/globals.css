@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg-start: #fef7f2;
+  --color-bg-mid: #f3e8fa;
+  --color-bg-end: #e4f0f8;
+  --color-surface: rgba(255, 255, 255, 0.45);
+  --color-surface-border: rgba(255, 255, 255, 0.6);
+  --color-text-primary: #2d1f3d;
+  --color-text-secondary: #6b5a7d;
+  --color-accent-from: #f472b6;
+  --color-accent-to: #c084fc;
+  --color-glow: rgba(244, 114, 182, 0.35);
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-start) 0%,
+    var(--color-bg-mid) 50%,
+    var(--color-bg-end) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  min-height: 100dvh;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 60%,
+    var(--color-glow, transparent) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+  transition: background 1.5s ease;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
