@@ -8,6 +8,7 @@ import PetalConfetti from "../components/PetalConfetti";
 import FloatingParticles from "../components/FloatingParticles";
 import LanguageToggle from "../components/LanguageToggle";
 import MusicButton from "../components/MusicButton";
+import NorwegianFlag from "../components/NorwegianFlag";
 import { generateFlower } from "../lib/flowers/generator";
 import { GeneratedFlower } from "../lib/flowers/types";
 import { LanguageProvider, useTranslation } from "../lib/i18n/LanguageContext";
@@ -32,7 +33,7 @@ function HomeContent() {
   }, [locale]);
 
   const confettiColors = useMemo(() => {
-    if (!flower) return ["#FFB6C1", "#FF69B4", "#FFC0CB", "#FFD700", "#E6D5F5"];
+    if (!flower) return ["#00205B", "#BA0C2F", "#2e7d32", "#fdd835", "#64b5f6"];
     const p = flower.palette;
     return [p.petalPrimary, p.petalSecondary, p.accent, p.center];
   }, [flower]);
@@ -67,6 +68,7 @@ function HomeContent() {
       <PetalConfetti trigger={confettiTrigger} colors={confettiColors} />
       <MusicButton />
       <LanguageToggle />
+      <NorwegianFlag />
 
       <div className="relative z-10 flex flex-col items-center gap-10 md:gap-14 w-full max-w-xl">
         <div className="font-[family-name:var(--font-caveat)]">

@@ -54,9 +54,9 @@ export default function Greeting() {
       <br className="md:hidden" />
       <motion.span variants={nameVariant} className="relative inline-block">
         <span className="absolute inset-0 -z-10 flex items-center justify-center" aria-hidden>
-          <span className="block w-40 h-12 bg-rose-400/20 blur-2xl rounded-full" />
+          <span className="block w-40 h-12 bg-blue-400/20 blur-2xl rounded-full" />
         </span>
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-purple-400">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BA0C2F] to-[#00205B]">
           {t.greetingName}
         </span>
       </motion.span>

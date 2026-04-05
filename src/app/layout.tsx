@@ -13,7 +13,7 @@ const caveat = Caveat({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#f3e8fa",
+  themeColor: "#e3f2fd",
 };
 
 export const metadata: Metadata = {

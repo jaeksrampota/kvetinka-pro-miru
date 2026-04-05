@@ -32,25 +32,25 @@ export default function GenerateButton({ onClick, hasFlower }: GenerateButtonPro
 
       <motion.button
         onClick={onClick}
-        className="relative text-white px-8 py-4 rounded-full text-lg md:text-xl font-semibold tracking-wide shadow-lg cursor-pointer select-none focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-2 focus-visible:outline-none"
+        className="relative text-white px-8 py-4 rounded-full text-lg md:text-xl font-semibold tracking-wide shadow-lg cursor-pointer select-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:outline-none"
         style={{
           backgroundImage:
-            "linear-gradient(to right, var(--color-accent-from, #f472b6), #ec4899, var(--color-accent-to, #c084fc))",
+            "linear-gradient(to right, var(--color-accent-from, #00205B), #1565c0, var(--color-accent-to, #2e7d32))",
           transition: "background-image 1.5s ease",
         }}
         whileHover={{
           scale: 1.06,
           boxShadow:
-            "0 0 40px rgba(244,114,182,0.45), 0 10px 30px rgba(192,132,252,0.2)",
+            "0 0 40px rgba(0,32,91,0.4), 0 10px 30px rgba(46,125,50,0.2)",
         }}
         whileTap={{ scale: 0.94 }}
         // Idle pulse when no flower is shown
         {...(!hasFlower && {
           animate: {
             boxShadow: [
-              "0 4px 14px rgba(244,114,182,0.3)",
-              "0 4px 14px rgba(244,114,182,0.3), 0 0 0 12px rgba(244,114,182,0)",
-              "0 4px 14px rgba(244,114,182,0.3)",
+              "0 4px 14px rgba(0,32,91,0.3)",
+              "0 4px 14px rgba(0,32,91,0.3), 0 0 0 12px rgba(0,32,91,0)",
+              "0 4px 14px rgba(0,32,91,0.3)",
             ],
           },
           transition: {

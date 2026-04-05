@@ -9,7 +9,7 @@ export default function LanguageToggle() {
   return (
     <motion.button
       onClick={toggleLanguage}
-      className="fixed top-4 right-4 z-50 flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide backdrop-blur-xl cursor-pointer select-none focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:outline-none"
+      className="fixed top-4 right-4 z-50 flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide backdrop-blur-xl cursor-pointer select-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:outline-none"
       style={{
         backgroundColor: "rgba(255,255,255,0.45)",
         border: "1px solid rgba(255,255,255,0.6)",

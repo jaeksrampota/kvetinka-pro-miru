@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Všetko najlepšie k sviatku, Mira! Vygeneruj si svoju jedinečnú kvetinu.",
     start_url: "/",
     display: "standalone",
-    background_color: "#fef7f2",
-    theme_color: "#f3e8fa",
+    background_color: "#e8f5e9",
+    theme_color: "#e3f2fd",
     orientation: "portrait",
     lang: "sk",
     icons: [
