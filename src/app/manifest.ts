@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Květinka pro Míru",
-    short_name: "Květinka",
+    short_name: "Pro Míru",
     description:
       "Všechno nejlepší k svátku, Míro! Vygeneruj si svou unikátní květinu.",
     start_url: "/",
