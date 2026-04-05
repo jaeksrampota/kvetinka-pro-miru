@@ -7,6 +7,7 @@ import FlowerDisplay from "../components/FlowerDisplay";
 import PetalConfetti from "../components/PetalConfetti";
 import FloatingParticles from "../components/FloatingParticles";
 import LanguageToggle from "../components/LanguageToggle";
+import MusicButton from "../components/MusicButton";
 import { generateFlower } from "../lib/flowers/generator";
 import { GeneratedFlower } from "../lib/flowers/types";
 import { LanguageProvider, useTranslation } from "../lib/i18n/LanguageContext";
@@ -64,6 +65,7 @@ function HomeContent() {
     <main className="relative flex flex-col items-center min-h-dvh px-6 md:px-8 pt-20 md:pt-28 pb-12 gap-10 md:gap-14 overflow-x-hidden">
       <FloatingParticles />
       <PetalConfetti trigger={confettiTrigger} colors={confettiColors} />
+      <MusicButton />
       <LanguageToggle />
 
       <div className="relative z-10 flex flex-col items-center gap-10 md:gap-14 w-full max-w-xl">

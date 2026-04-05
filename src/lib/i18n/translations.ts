@@ -10,13 +10,13 @@ export interface UITranslations {
 const ui: Record<Locale, UITranslations> = {
   sk: {
     greeting: ["Všetko", "najlepšie", "k sviatku,"],
-    greetingName: "Míra!",
+    greetingName: "Mira!",
     buttonFirst: "Vygeneruj kvetinu",
     buttonNext: "Ďalšia kvetina",
   },
   en: {
     greeting: ["Happy", "Name Day,"],
-    greetingName: "Míra!",
+    greetingName: "Mira!",
     buttonFirst: "Generate flower",
     buttonNext: "Next flower",
   },

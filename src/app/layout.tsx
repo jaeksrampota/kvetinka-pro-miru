@@ -17,14 +17,14 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Kvetinka pre Míru",
+  title: "Kvetinka pre Miru",
   description:
-    "Všetko najlepšie k sviatku, Míra! Vygeneruj si svoju jedinečnú kvetinu.",
-  applicationName: "Kvetinka pre Míru",
+    "Všetko najlepšie k sviatku, Mira! Vygeneruj si svoju jedinečnú kvetinu.",
+  applicationName: "Kvetinka pre Miru",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Pre Míru",
+    title: "Pre Miru",
   },
   formatDetection: {
     telephone: false,
