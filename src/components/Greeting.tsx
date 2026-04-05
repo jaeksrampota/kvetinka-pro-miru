@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const prefixWords = ["Všechno", "nejlepší", "k svátku,"];
+import { useTranslation } from "../lib/i18n/LanguageContext";
 
 const container = {
   hidden: { opacity: 0 },
@@ -38,6 +37,8 @@ const nameVariant = {
 };
 
 export default function Greeting() {
+  const { t } = useTranslation();
+
   return (
     <motion.h1
       className="text-4xl md:text-6xl text-center text-[var(--color-text-primary)] leading-[1.15] font-bold tracking-tight overflow-visible px-4"
@@ -45,19 +46,18 @@ export default function Greeting() {
       initial="hidden"
       animate="visible"
     >
-      {prefixWords.map((word, i) => (
+      {t.greeting.map((word, i) => (
         <motion.span key={i} variants={wordVariant} className="inline-block mr-2 md:mr-3">
           {word}
         </motion.span>
       ))}
       <br className="md:hidden" />
       <motion.span variants={nameVariant} className="relative inline-block">
-        {/* Soft glow behind name */}
         <span className="absolute inset-0 -z-10 flex items-center justify-center" aria-hidden>
           <span className="block w-40 h-12 bg-rose-400/20 blur-2xl rounded-full" />
         </span>
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-purple-400">
-          Míro!
+          {t.greetingName}
         </span>
       </motion.span>
     </motion.h1>

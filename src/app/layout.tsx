@@ -17,14 +17,14 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Květinka pro Míru",
+  title: "Kvetinka pre Míru",
   description:
-    "Všechno nejlepší k svátku, Míro! Vygeneruj si svou unikátní květinu.",
-  applicationName: "Květinka pro Míru",
+    "Všetko najlepšie k sviatku, Míra! Vygeneruj si svoju jedinečnú kvetinu.",
+  applicationName: "Kvetinka pre Míru",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Pro Míru",
+    title: "Pre Míru",
   },
   formatDetection: {
     telephone: false,
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs" className={`${nunito.variable} ${caveat.variable}`}>
+    <html lang="sk" className={`${nunito.variable} ${caveat.variable}`}>
       <body className="font-[family-name:var(--font-nunito)] min-h-dvh">{children}</body>
     </html>
   );

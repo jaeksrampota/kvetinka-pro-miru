@@ -2,16 +2,16 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Květinka pro Míru",
-    short_name: "Pro Míru",
+    name: "Kvetinka pre Míru",
+    short_name: "Pre Míru",
     description:
-      "Všechno nejlepší k svátku, Míro! Vygeneruj si svou unikátní květinu.",
+      "Všetko najlepšie k sviatku, Míra! Vygeneruj si svoju jedinečnú kvetinu.",
     start_url: "/",
     display: "standalone",
     background_color: "#fef7f2",
     theme_color: "#f3e8fa",
     orientation: "portrait",
-    lang: "cs",
+    lang: "sk",
     icons: [
       { src: "/icons/icon-72x72.png", sizes: "72x72", type: "image/png" },
       { src: "/icons/icon-96x96.png", sizes: "96x96", type: "image/png" },

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "../lib/i18n/LanguageContext";
 
 interface GenerateButtonProps {
   onClick: () => void;
@@ -8,6 +9,8 @@ interface GenerateButtonProps {
 }
 
 export default function GenerateButton({ onClick, hasFlower }: GenerateButtonProps) {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       className="relative"
@@ -66,7 +69,7 @@ export default function GenerateButton({ onClick, hasFlower }: GenerateButtonPro
             transition={{ duration: 0.2 }}
             className="inline-block"
           >
-            {hasFlower ? "Další květina" : "Vygeneruj květinu"}
+            {hasFlower ? t.buttonNext : t.buttonFirst}
           </motion.span>
         </AnimatePresence>
       </motion.button>

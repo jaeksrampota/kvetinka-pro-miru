@@ -6,18 +6,29 @@ import GenerateButton from "../components/GenerateButton";
 import FlowerDisplay from "../components/FlowerDisplay";
 import PetalConfetti from "../components/PetalConfetti";
 import FloatingParticles from "../components/FloatingParticles";
+import LanguageToggle from "../components/LanguageToggle";
 import { generateFlower } from "../lib/flowers/generator";
 import { GeneratedFlower } from "../lib/flowers/types";
+import { LanguageProvider, useTranslation } from "../lib/i18n/LanguageContext";
 
-export default function Home() {
+function HomeContent() {
+  const { locale } = useTranslation();
   const [flower, setFlower] = useState<GeneratedFlower | null>(null);
   const [confettiTrigger, setConfettiTrigger] = useState(1);
 
   const handleGenerate = useCallback(() => {
-    const newFlower = generateFlower();
+    const newFlower = generateFlower(locale);
     setFlower(newFlower);
     setConfettiTrigger((prev) => prev + 1);
-  }, []);
+  }, [locale]);
+
+  // Re-generate flower when language changes so name/fact update
+  useEffect(() => {
+    if (flower) {
+      setFlower(generateFlower(locale));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [locale]);
 
   const confettiColors = useMemo(() => {
     if (!flower) return ["#FFB6C1", "#FF69B4", "#FFC0CB", "#FFD700", "#E6D5F5"];
@@ -53,6 +64,7 @@ export default function Home() {
     <main className="relative flex flex-col items-center min-h-dvh px-6 md:px-8 pt-20 md:pt-28 pb-12 gap-10 md:gap-14 overflow-x-hidden">
       <FloatingParticles />
       <PetalConfetti trigger={confettiTrigger} colors={confettiColors} />
+      <LanguageToggle />
 
       <div className="relative z-10 flex flex-col items-center gap-10 md:gap-14 w-full max-w-xl">
         <div className="font-[family-name:var(--font-caveat)]">
@@ -64,5 +76,13 @@ export default function Home() {
         <FlowerDisplay flower={flower} />
       </div>
     </main>
+  );
+}
+
+export default function Home() {
+  return (
+    <LanguageProvider>
+      <HomeContent />
+    </LanguageProvider>
   );
 }
