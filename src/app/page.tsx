@@ -9,6 +9,7 @@ import FloatingParticles from "../components/FloatingParticles";
 import LanguageToggle from "../components/LanguageToggle";
 import MusicButton from "../components/MusicButton";
 import NorwegianFlag from "../components/NorwegianFlag";
+import ScatteredFlags from "../components/ScatteredFlags";
 import RotatingPhoto from "../components/RotatingPhoto";
 import { generateFlower } from "../lib/flowers/generator";
 import { GeneratedFlower } from "../lib/flowers/types";
@@ -66,20 +67,25 @@ function HomeContent() {
   return (
     <main className="relative flex flex-col items-center min-h-dvh px-6 md:px-8 pt-20 md:pt-28 pb-12 gap-10 md:gap-14 overflow-x-hidden">
       <FloatingParticles />
+      <ScatteredFlags />
       <PetalConfetti trigger={confettiTrigger} colors={confettiColors} />
       <MusicButton />
       <LanguageToggle />
       <NorwegianFlag />
 
       <div className="relative z-10 flex flex-col items-center gap-10 w-full max-w-xl">
-        <div style={{ display: "flex", alignItems: "center", gap: 24, justifyContent: "center", flexWrap: "wrap" }}>
-          <div className="flex flex-col items-center" style={{ gap: 40 }}>
-            <div className="font-[family-name:var(--font-caveat)]">
-              <Greeting />
-            </div>
-            <GenerateButton onClick={handleGenerate} hasFlower={!!flower} />
+        <div className="flex flex-col items-center" style={{ gap: 40 }}>
+          <div className="font-[family-name:var(--font-caveat)]">
+            <Greeting />
           </div>
-          <RotatingPhoto />
+          <GenerateButton onClick={handleGenerate} hasFlower={!!flower} />
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, placeItems: "center" }}>
+          <RotatingPhoto delay={0.3} finalAngle={-6} />
+          <RotatingPhoto delay={0.6} finalAngle={4} />
+          <RotatingPhoto delay={0.9} finalAngle={5} />
+          <RotatingPhoto delay={1.2} finalAngle={-4} />
         </div>
 
         <FlowerDisplay flower={flower} />
