@@ -6,6 +6,13 @@ export enum FlowerSpecies {
   PEONY = "PEONY",
   LAVENDER = "LAVENDER",
   POPPY = "POPPY",
+  ORCHID = "ORCHID",
+  LILY = "LILY",
+  DAHLIA = "DAHLIA",
+  IRIS = "IRIS",
+  CHERRY_BLOSSOM = "CHERRY_BLOSSOM",
+  HYDRANGEA = "HYDRANGEA",
+  FORGET_ME_NOT = "FORGET_ME_NOT",
 }
 
 export interface ColorPalette {

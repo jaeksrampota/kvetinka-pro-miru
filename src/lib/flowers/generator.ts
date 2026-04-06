@@ -15,8 +15,13 @@ export function generateFlower(locale: Locale = "sk"): GeneratedFlower {
   const palette = getPalette(species);
   const { petals, center } = generatePetals(species, palette);
   const stemPath = generateStem(palette.stem);
-  const leaves = species === FlowerSpecies.LAVENDER
-    ? generateLeaves(palette.stem, 2)
+  let leafCount: number | undefined;
+  if (species === FlowerSpecies.LAVENDER) leafCount = 2;
+  else if (species === FlowerSpecies.CHERRY_BLOSSOM) leafCount = 1;
+  else if (species === FlowerSpecies.HYDRANGEA) leafCount = 3;
+  else if (species === FlowerSpecies.FORGET_ME_NOT) leafCount = 1;
+  const leaves = leafCount !== undefined
+    ? generateLeaves(palette.stem, leafCount)
     : generateLeaves(palette.stem);
   const { name, fact } = getFlowerInfo(species, locale);
 

@@ -71,6 +71,69 @@ const flowerData: Record<Locale, Record<FlowerSpecies, FlowerInfo>> = {
         "Semienka vlčieho maku si uchovávajú klíčivosť aj desiatky rokov.",
       ],
     },
+    [FlowerSpecies.ORCHID]: {
+      name: "Orchidea",
+      facts: [
+        "Orchidey sú jedna z najväčších čeľadí kvetín s vyše 25 000 druhmi.",
+        "Niektoré orchidey napodobňujú hmyz, aby prilákali opeľovačov.",
+        "Vanilka pochádza z orchidey druhu Vanilla planifolia.",
+        "Orchidey môžu žiť desaťročia, niektoré aj viac než sto rokov.",
+      ],
+    },
+    [FlowerSpecies.LILY]: {
+      name: "Ľalia",
+      facts: [
+        "Ľalie sú jednou z najstarších pestovaných kvetín v histórii.",
+        "V starom Grécku bola ľalia symbolom čistoty a krásy.",
+        "Peľ ľalie zanecháva škvrny, ktoré sa takmer nedajú odstrániť.",
+        "Niektoré druhy ľalií voňajú tak intenzívne, že naplnia celú miestnosť.",
+      ],
+    },
+    [FlowerSpecies.DAHLIA]: {
+      name: "Georgína",
+      facts: [
+        "Georgíny pochádzajú z Mexika, kde boli pôvodne pestované na jedenie.",
+        "Existuje vyše 42 000 registrovaných odrôd georgín.",
+        "Georgína je národná kvetina Mexika.",
+        "Na konci 18. storočia sa georgíny pestovali pre ich jedlé hľuzy, nie kvety.",
+      ],
+    },
+    [FlowerSpecies.IRIS]: {
+      name: "Kosatec",
+      facts: [
+        "Názov iris pochádza od gréckej bohyne dúhy.",
+        "Kosatce sa používajú vo francúzskej parfumérii už stáročia.",
+        "Koreň florentského kosatca vonia po fialkách.",
+        "Kosatec je symbolom na francúzskom erbe, známy ako fleur-de-lis.",
+      ],
+    },
+    [FlowerSpecies.CHERRY_BLOSSOM]: {
+      name: "Sakura",
+      facts: [
+        "V Japonsku je hanami — obdivovanie sakúr — tisícročná tradícia.",
+        "Väčšina sakúr kvitne len 1 až 2 týždne v roku.",
+        "Sakury symbolizujú pominuteľnosť a krásu okamihu.",
+        "Japonsko každoročne daruje sakury mestám po celom svete ako symbol priateľstva.",
+      ],
+    },
+    [FlowerSpecies.HYDRANGEA]: {
+      name: "Hortenzia",
+      facts: [
+        "Farba hortenzií závisí od kyslosti pôdy — kyslá pôda dáva modrú.",
+        "V alkalickej pôde rastú ružové hortenzie.",
+        "Hortenzia bola objavená v Japonsku a nesie meno po francúzskom botanikovi.",
+        "Jedna hortenzia sa skladá z desiatok malých kvetov.",
+      ],
+    },
+    [FlowerSpecies.FORGET_ME_NOT]: {
+      name: "Nezábudka",
+      facts: [
+        "Podľa legendy rytier hodil kyticu nezábudiek svojej milej s výkrikom 'Nezabudni na mňa!'",
+        "Nezábudky sú symbolom vernej lásky a spomienok.",
+        "Tieto drobné kvety rastú rady pri potokoch a na vlhkých lúkach.",
+        "Nezábudka je oficiálna kvetina amerického štátu Aljaška.",
+      ],
+    },
   },
   en: {
     [FlowerSpecies.DAISY]: {
@@ -134,6 +197,69 @@ const flowerData: Record<Locale, Record<FlowerSpecies, FlowerInfo>> = {
         "Poppy petals are so delicate they crumple at the slightest touch.",
         "After rain, poppies shake themselves off and stand upright again.",
         "Poppy seeds can remain viable for decades.",
+      ],
+    },
+    [FlowerSpecies.ORCHID]: {
+      name: "Orchid",
+      facts: [
+        "Orchids are one of the largest flower families with over 25,000 species.",
+        "Some orchids mimic insects to attract pollinators.",
+        "Vanilla comes from the orchid species Vanilla planifolia.",
+        "Orchids can live for decades, some even over a hundred years.",
+      ],
+    },
+    [FlowerSpecies.LILY]: {
+      name: "Lily",
+      facts: [
+        "Lilies are among the oldest cultivated flowers in history.",
+        "In ancient Greece, the lily was a symbol of purity and beauty.",
+        "Lily pollen leaves stains that are nearly impossible to remove.",
+        "Some lily species have a fragrance so intense it fills an entire room.",
+      ],
+    },
+    [FlowerSpecies.DAHLIA]: {
+      name: "Dahlia",
+      facts: [
+        "Dahlias originate from Mexico, where they were first grown for eating.",
+        "There are over 42,000 registered dahlia varieties.",
+        "The dahlia is the national flower of Mexico.",
+        "In the late 1700s, dahlias were cultivated for their edible tubers, not flowers.",
+      ],
+    },
+    [FlowerSpecies.IRIS]: {
+      name: "Iris",
+      facts: [
+        "The name iris comes from the Greek goddess of the rainbow.",
+        "Irises have been used in French perfumery for centuries.",
+        "The root of the Florentine iris smells like violets.",
+        "The iris is the symbol on the French coat of arms, known as fleur-de-lis.",
+      ],
+    },
+    [FlowerSpecies.CHERRY_BLOSSOM]: {
+      name: "Cherry Blossom",
+      facts: [
+        "In Japan, hanami — admiring cherry blossoms — is a thousand-year-old tradition.",
+        "Most cherry blossoms bloom for only one to two weeks per year.",
+        "Cherry blossoms symbolise the fleeting beauty of each moment.",
+        "Japan gives cherry trees to cities worldwide as a symbol of friendship.",
+      ],
+    },
+    [FlowerSpecies.HYDRANGEA]: {
+      name: "Hydrangea",
+      facts: [
+        "Hydrangea colour depends on soil acidity — acidic soil produces blue.",
+        "In alkaline soil, hydrangeas grow pink.",
+        "The hydrangea was discovered in Japan and named after a French botanist.",
+        "A single hydrangea head is actually made up of dozens of tiny flowers.",
+      ],
+    },
+    [FlowerSpecies.FORGET_ME_NOT]: {
+      name: "Forget-Me-Not",
+      facts: [
+        "Legend says a knight tossed forget-me-nots to his love crying 'Forget me not!'",
+        "Forget-me-nots symbolise faithful love and remembrance.",
+        "These tiny flowers love growing near streams and in damp meadows.",
+        "The forget-me-not is the official flower of the U.S. state of Alaska.",
       ],
     },
   },

@@ -9,6 +9,7 @@ import FloatingParticles from "../components/FloatingParticles";
 import LanguageToggle from "../components/LanguageToggle";
 import MusicButton from "../components/MusicButton";
 import NorwegianFlag from "../components/NorwegianFlag";
+import RotatingPhoto from "../components/RotatingPhoto";
 import { generateFlower } from "../lib/flowers/generator";
 import { GeneratedFlower } from "../lib/flowers/types";
 import { LanguageProvider, useTranslation } from "../lib/i18n/LanguageContext";
@@ -70,12 +71,16 @@ function HomeContent() {
       <LanguageToggle />
       <NorwegianFlag />
 
-      <div className="relative z-10 flex flex-col items-center gap-10 md:gap-14 w-full max-w-xl">
-        <div className="font-[family-name:var(--font-caveat)]">
-          <Greeting />
+      <div className="relative z-10 flex flex-col items-center gap-10 w-full max-w-xl">
+        <div style={{ display: "flex", alignItems: "center", gap: 24, justifyContent: "center", flexWrap: "wrap" }}>
+          <div className="flex flex-col items-center" style={{ gap: 40 }}>
+            <div className="font-[family-name:var(--font-caveat)]">
+              <Greeting />
+            </div>
+            <GenerateButton onClick={handleGenerate} hasFlower={!!flower} />
+          </div>
+          <RotatingPhoto />
         </div>
-
-        <GenerateButton onClick={handleGenerate} hasFlower={!!flower} />
 
         <FlowerDisplay flower={flower} />
       </div>

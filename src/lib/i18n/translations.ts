@@ -5,6 +5,9 @@ export interface UITranslations {
   greetingName: string;
   buttonFirst: string;
   buttonNext: string;
+  musicLabel: string;
+  stopLabel: string;
+  chooseSong: string;
 }
 
 const ui: Record<Locale, UITranslations> = {
@@ -13,12 +16,18 @@ const ui: Record<Locale, UITranslations> = {
     greetingName: "Mira!",
     buttonFirst: "Vygeneruj kvetinu",
     buttonNext: "Ďalšia kvetina",
+    musicLabel: "Hudba",
+    stopLabel: "Stop",
+    chooseSong: "Vyber piesen",
   },
   en: {
     greeting: ["Happy", "Name Day,"],
     greetingName: "Mira!",
     buttonFirst: "Generate flower",
     buttonNext: "Next flower",
+    musicLabel: "Music",
+    stopLabel: "Stop",
+    chooseSong: "Choose a song",
   },
 };
 
